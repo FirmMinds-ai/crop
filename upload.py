@@ -1,13 +1,17 @@
 import os
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask, flash, request
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+if os.path.isdir('uploads'):
+    pass
+else:
+    os.mkdir('uploads')
 
 @app.route('/image', methods=['POST'])
 def upload_file():
