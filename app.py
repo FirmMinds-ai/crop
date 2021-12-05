@@ -29,6 +29,7 @@ def upload_file():
         img = plt.imread(path)
         print(type(img))
         print(img.shape)
+        os.remove(path)
         return "success"
 
 if __name__ == '__main__':
