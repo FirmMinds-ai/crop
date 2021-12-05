@@ -5,8 +5,5 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.5
 numpy
 scipy>=0.15.1
-nltk==3.4.4
 Flask==1.1.1
-dnspython
-bs4
-pymongo
+
