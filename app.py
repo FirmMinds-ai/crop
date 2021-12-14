@@ -32,7 +32,7 @@ def upload_file():
         B2 = img[:,:,1].mean()
         B3 = img[:,:,2].mean()
 
-        NDVI = ((B1-B2)/(B1+B2)
+        NDVI = (B1-B2)/(B1+B2)
         SR1 = (B1/B2)
         SR2 = (B1/B3)
 
