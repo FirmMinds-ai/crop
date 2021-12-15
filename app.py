@@ -3,11 +3,16 @@ from flask import Flask, flash, request
 from werkzeug.utils import secure_filename
 import matplotlib.pyplot as plt
 from flask import jsonify
+from flask_cors import CORS
+
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
+
+CORS(app)
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 if os.path.isdir('uploads'):
