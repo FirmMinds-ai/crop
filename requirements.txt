@@ -9,4 +9,4 @@ Flask==1.1.1
 flask_cors
 matplotlib
 Pillow==8.2.0
-base64
+
