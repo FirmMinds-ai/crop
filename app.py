@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image
 import base64
 import io
-import time
+
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -125,7 +125,7 @@ def upload_file():
     d = {
         1: "Moderate Health",
         2: "Healthy",
-        0: "Un healthy"
+        0: "Unhealthy"
     }
     print(sums)
     img = plt.imread(path)
